@@ -1,67 +1,67 @@
 {
-  "name": "@suseejs/dependencies",
-  "version": "0.1.0",
-  "description": "Analyze a TypeScript/JavaScript project's dependencies and generates a dependency graph using TypeScript APIs",
-  "type": "module",
-  "scripts": {
-    "lint": "biome check src --write && biome check opt --write",
-    "fmt": "biome format --write",
-    "test": "tsx --test test/*.test.ts",
-    "coverage": "tsx opt/lcov/index.ts",
-    "build": "tsx opt/build/index.ts",
-    "prepare": "husky"
-  },
-  "main": "dist/index.cjs",
-  "module": "dist/index.js",
-  "types": "dist/index.d.cts",
-  "exports": {
-    ".": {
-      "require": {
-        "types": "./dist/index.d.cts",
-        "default": "./dist/index.cjs"
-      },
-      "import": {
-        "types": "./dist/index.d.ts",
-        "default": "./dist/index.js"
-      }
-    }
-  },
-  "keywords": [
-    "dependencies",
-    "dependency",
-    "graph",
-    "circular"
-  ],
-  "files": [
-    "dist",
-    "LICENSE",
-    "readme.md",
-    "package.json"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/suseejs/dependencies.git"
-  },
-  "author": {
-    "name": "Pho Thin Mg",
-    "email": "phothinmg@disroot.org",
-    "url": "https://phothinmg.github.io/"
-  },
-  "license": "Apache-2.0",
-  "bugs": {
-    "url": "https://github.com/suseejs/dependencies/issues"
-  },
-  "homepage": "https://github.com/suseejs/dependencies#readme",
-  "dependencies": {
-    "typescript": "^5.9.3"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "^2.3.13",
-    "@types/node": "^25.0.10",
-    "husky": "^9.1.7",
-    "tsx": "^4.21.0"
-  },
-  "publishConfig": {
-    "access": "public"
-  }
+	"name": "@suseejs/dependencies",
+	"version": "0.1.0",
+	"description": "Analyze a TypeScript/JavaScript project's dependencies and generates a dependency graph using TypeScript APIs",
+	"type": "module",
+	"scripts": {
+		"lint": "biome check src --write && biome check opt --write",
+		"fmt": "biome format --write",
+		"test": "tsx --test test/*.test.ts",
+		"coverage": "tsx opt/lcov/index.ts",
+		"build": "tsx opt/build/index.ts",
+		"prepare": "husky"
+	},
+	"main": "dist/index.cjs",
+	"module": "dist/index.js",
+	"types": "dist/index.d.cts",
+	"exports": {
+		".": {
+			"require": {
+				"types": "./dist/index.d.cts",
+				"default": "./dist/index.cjs"
+			},
+			"import": {
+				"types": "./dist/index.d.ts",
+				"default": "./dist/index.js"
+			}
+		}
+	},
+	"keywords": [
+		"dependencies",
+		"dependency",
+		"graph",
+		"circular"
+	],
+	"files": [
+		"dist",
+		"LICENSE",
+		"readme.md",
+		"package.json"
+	],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/suseejs/dependencies.git"
+	},
+	"author": {
+		"name": "Pho Thin Mg",
+		"email": "phothinmg@disroot.org",
+		"url": "https://phothinmg.github.io/"
+	},
+	"license": "Apache-2.0",
+	"bugs": {
+		"url": "https://github.com/suseejs/dependencies/issues"
+	},
+	"homepage": "https://github.com/suseejs/dependencies#readme",
+	"dependencies": {
+		"typescript": "^5.9.3"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^2.3.13",
+		"@types/node": "^25.0.10",
+		"husky": "^9.1.7",
+		"tsx": "^4.21.0"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
 }
