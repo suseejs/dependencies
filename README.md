@@ -1,5 +1,5 @@
 <div align="center">
-<img src="https://github.com/suseejs/dependencies/blob/main/susee.svg" width="160" height="160" alt="susee">
+<img src="/susee.png" width="160" height="160" alt="susee">
 <h1>dependencies</h1>
 </div>
 
@@ -101,7 +101,6 @@ These methods provide formatted output and analysis metadata.
 ## License
 
 [Apache-2.0][file-license] © [Pho Thin Mg][ptm]
-
 
 [file-license]: LICENSE
 [ptm]: https://github.com/phothinmg
