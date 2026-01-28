@@ -1,6 +1,6 @@
 {
 	"name": "@suseejs/dependencies",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "Analyze a TypeScript/JavaScript project's dependencies and generates a dependency graph using TypeScript APIs",
 	"type": "module",
 	"scripts": {
