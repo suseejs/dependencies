@@ -1,0 +1,29 @@
+{
+  "name": "@suseejs/dependencies",
+  "version": "1.0.0",
+  "description": "Analyze a TypeScript/JavaScript project's dependencies and generates a dependency graph using TypeScript APIs",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suseejs/dependencies.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/suseejs/dependencies/issues"
+  },
+  "homepage": "https://github.com/suseejs/dependencies#readme",
+  "dependencies": {
+    "typescript": "^5.9.3"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.3.13",
+    "@types/node": "^25.0.10",
+    "tsx": "^4.21.0"
+  }
+}
