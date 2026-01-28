@@ -64,15 +64,15 @@ const commonjsCompiler = async (
 		const ext = path.extname(outName);
 		if (ext === ".js") {
 			content = content.replace(
-				"exports.default = dependensia;",
-				"module.exports = dependensia;",
+				"exports.default = dependencies;",
+				"module.exports = dependencies;",
 			);
 		}
 		if (ext === ".ts") {
 			content = content
-				.replace("export type { Dependensia };", "")
+				.replace("export type { dependencies };", "")
 				.trim()
-				.replace("export default dependensia;", "export = dependensia;");
+				.replace("export default dependencies;", "export = dependencies;");
 		}
 		//content = `${licenseText}\n${content}`;
 		if (hooks?.length) {

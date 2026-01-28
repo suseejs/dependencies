@@ -1,4 +1,3 @@
-
 /**
  * Visualize a dependency graph as a string.
  * The visualization is a simple text-based tree structure.

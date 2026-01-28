@@ -1,3 +1,4 @@
+import fs from "node:fs";
 import path from "node:path";
 import ts from "typescript";
 
@@ -28,4 +29,25 @@ const writeOutFile = (filePath: string, content: string) => {
 	writeFile(resolvedPath, content);
 };
 
-export { wait, writeOutFile, readFile, resolvePath };
+async function clearFolder(folderPath: string) {
+	folderPath = path.resolve(process.cwd(), folderPath);
+	try {
+		const entries = await fs.promises.readdir(folderPath, {
+			withFileTypes: true,
+		});
+		await Promise.all(
+			entries.map((entry) =>
+				fs.promises.rm(path.join(folderPath, entry.name), {
+					recursive: true,
+				}),
+			),
+		);
+	} catch (error) {
+		// biome-ignore lint/suspicious/noExplicitAny: error code
+		if ((error as any).code !== "ENOENT") {
+			throw error;
+		}
+	}
+}
+
+export { wait, writeOutFile, readFile, resolvePath, clearFolder };

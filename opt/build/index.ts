@@ -1,5 +1,6 @@
+import fs from "node:fs";
 import path from "node:path";
-import { wait } from "../helpers";
+import { clearFolder, wait } from "../helpers";
 import bundle from "./bundle";
 import { commonjsCompiler, esmCompiler, type OutPutHook } from "./compile";
 
@@ -44,6 +45,9 @@ const bannerText = (str: string): OutPutHook => {
  */
 async function build() {
 	console.time("Build Time");
+	if (fs.existsSync(outDir)) {
+		await clearFolder(outDir);
+	}
 	const sourceCode = await bundle(entry);
 	await wait(1000);
 	commonjsCompiler(sourceCode, outDir, entry, [bannerText(licenseText)]);
