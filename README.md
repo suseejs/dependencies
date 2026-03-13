@@ -1,6 +1,8 @@
+<!-- markdownlint-disable MD033 -->
+<!-- markdownlint-disable MD041 -->
 <div align="center">
-<img src="/susee.png" width="160" height="160" alt="susee">
-<h1>dependencies</h1>
+<img src="https://susee.phothin.dev/logo/susee.webp" width="160" height="160" alt="susee" />
+  <h1>Susee Dependencies</h1>
 </div>
 
 A static analysis tool designed to examine TypeScript and JavaScript projects and produce dependency graphs,using TypeScript APIs.

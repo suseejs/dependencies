@@ -60,7 +60,7 @@ function handleAwaitImport(node: ts.Node, processFn: (input: string) => void) {
 		node.expression.expression.kind === ts.SyntaxKind.ImportKeyword
 	) {
 		const firstArg = node.expression.arguments[0];
-		if (ts.isStringLiteral(firstArg)) {
+		if (firstArg && ts.isStringLiteral(firstArg)) {
 			processFn(firstArg.text);
 		}
 		return;

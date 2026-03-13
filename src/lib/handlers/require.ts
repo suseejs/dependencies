@@ -22,7 +22,7 @@ function handleRequire(node: ts.Node, processFn: (input: string) => void) {
 		// index 0 of arguments is moduleText
 		// I didn't use forEach or for-off loop to avoid multiple processing.
 		const firstArg = node.arguments[0];
-		if (ts.isStringLiteral(firstArg)) {
+		if (firstArg && ts.isStringLiteral(firstArg)) {
 			processFn(firstArg.text);
 		}
 		return; // Skip children for property access require calls
@@ -37,7 +37,7 @@ function handleRequire(node: ts.Node, processFn: (input: string) => void) {
 		node.expression.arguments.length > 0
 	) {
 		const firstArg = node.expression.arguments[0];
-		if (ts.isStringLiteral(firstArg)) {
+		if (firstArg && ts.isStringLiteral(firstArg)) {
 			processFn(firstArg.text);
 		}
 		return; // Skip children for property access require calls

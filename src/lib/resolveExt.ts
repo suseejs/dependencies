@@ -32,7 +32,8 @@ function isDir(filePath: string) {
 }
 
 function getFileName(input: string) {
-	return path.basename(input).split(".")[0].trim();
+	const namePart = path.basename(input).split(".")[0];
+	return namePart ? namePart.trim() : "";
 }
 function getExtensionName(input: string) {
 	return path.basename(input).split(".")[1]?.trim() || "";
